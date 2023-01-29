@@ -1,0 +1,14 @@
+backend/node_modules
+products_service/node_modules
+
+
+backend/.idea
+products-service/.idea
+
+backend/yarn.lock
+products-service/yarn.lock
+
+backend/yarn-error.log
+products-service/yarn-error.log
+
+products-service/.env
