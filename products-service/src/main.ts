@@ -3,19 +3,12 @@ if (!process.env.IS_TS_NODE) {
 }
 
 import { NestFactory } from '@nestjs/core';
-import { MicroserviceOptions, Transport } from '@nestjs/microservices';
+import { MicroserviceOptions } from '@nestjs/microservices';
 import { AppModule } from './app.module';
-
-const microserviceOptions: MicroserviceOptions = {
-  transport: Transport.TCP,
-  options: {
-    host: 'localhost',
-    port: 3000,
-  }
-}
+import grpcOptions from './common/grpc.options';
 
 async function bootstrap() {
-  const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, microserviceOptions);
+  const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, grpcOptions as MicroserviceOptions);
   await app.listen();
 }
 bootstrap();

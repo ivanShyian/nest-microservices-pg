@@ -1,14 +1,17 @@
-backend/node_modules
+client/node_modules
 products_service/node_modules
 
 
-backend/.idea
+client/.idea
 products-service/.idea
 
-backend/yarn.lock
+client/yarn.lock
 products-service/yarn.lock
 
-backend/yarn-error.log
+client/yarn-error.log
 products-service/yarn-error.log
 
 products-service/.env
+
+client/src/common
+products-service/src/common

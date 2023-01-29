@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ProductController } from './product.controller';
-import { ClientProviderOptions, ClientsModule, Transport } from '@nestjs/microservices';
+import { ClientProviderOptions, ClientsModule } from '@nestjs/microservices';
+import grpcOptions from '../common/grpc.options';
 
-const microserviceOptions: ClientProviderOptions = {
-  name: 'PRODUCT_SERVICE',
-  transport: Transport.TCP
-}
+const microserviceOptions = { name: 'PRODUCT_CONTROLLER', ...grpcOptions } as ClientProviderOptions;
 
 @Module({
   imports: [

@@ -1,0 +1,7 @@
+[submodule "products-service/src/common"]
+	path = products-service/src/common
+	url = git@github.com:ivanShyian/nest-microservices-pg-submobile.git
+
+[submodule "client/src/common"]
+	path = client/src/common
+	url = git@github.com:ivanShyian/nest-microservices-pg-submobile.git
